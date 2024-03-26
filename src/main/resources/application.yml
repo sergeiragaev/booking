@@ -1,7 +1,7 @@
 spring:
   data:
     mongodb:
-      uri: mongodb://root:root@192.168.1.6:27017/bookingdatabase?authSource=admin
+      uri: mongodb://root:root@mongo:27017/bookingdatabase?authSource=admin
   jpa:
     generate-ddl: true
     show-sql: true
@@ -14,7 +14,7 @@ spring:
       connection-init-sql: CREATE SCHEMA IF NOT EXISTS booking_schema
       connection-timeout: 10000
   kafka:
-    bootstrap-servers: 192.168.1.6:9092
+    bootstrap-servers: kafka:9092
 app:
   kafka:
     kafkaMessageUserTopic: "kafka-user-topic"
